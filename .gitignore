@@ -1,0 +1,14 @@
+.direnv
+
+# Talos
+controlplane.yaml
+worker.yaml
+talosconfig
+kubeconfig
+secrets.yaml
+
+# backups
+old-configs-*/
+*.bak
+*.bak2
+age.key

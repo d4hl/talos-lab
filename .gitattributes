@@ -1,0 +1,4 @@
+# Readable diff
+# onetime setup:
+#   git config diff.sopsdiffer.textconv "sops -d"
+*.enc.yaml diff=sopsdiffer text

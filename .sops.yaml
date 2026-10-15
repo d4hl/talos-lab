@@ -1,3 +1,5 @@
 creation_rules:
   - path_regex: (controlplane|worker|talosconfig|kubeconfig)(\.enc)?(\.yaml)?$
-    age: age1zvztu6knc8hm3jrwytja9cugr7elhzshwfg54j6zcdg8yuzgag0sm6dcvg
+    age: >-
+      age1zvztu6knc8hm3jrwytja9cugr7elhzshwfg54j6zcdg8yuzgag0sm6dcvg,
+      age18glf3hxz94juhcw3hf8q6t4txpsydpeq8zx470rzgq4a3dj7zsjq0qqeev

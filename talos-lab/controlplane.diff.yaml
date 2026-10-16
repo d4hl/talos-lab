@@ -1,0 +1,16 @@
+# Config patch for controlplane nodes (applied via `talosctl gen config --config-patch-control-plane @controlplane.diff.yaml`).
+# Only describes the delta from the generated defaults — no secrets here.
+machine:
+  # IPs (incl. VIP) for which the API server / machine certificates are valid.
+  certSANs:
+    - 10.10.10.10
+    - 10.10.10.11
+    - 10.10.10.12
+    - 10.10.10.13
+  network:
+    interfaces:
+      - interface: enp1s0
+        dhcp: true
+        # Shared control-plane VIP (kube-vip style leader election is handled by Talos).
+        vip:
+          ip: 10.10.10.10

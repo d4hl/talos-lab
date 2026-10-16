@@ -13,6 +13,8 @@
       devShells.${system}.default = pkgs.mkShell {
         packages = with pkgs; [
           talosctl
+          sops
+          age
         ];
       };
     };

@@ -6,11 +6,11 @@ variable "image_path" {
 variable "network_name" {
   description = "Name of common libvirt network"
   type        = string
-  default     = "ha-net"
+  default     = "talos-net"
 }
 
 variable "network_domain" {
   description = "top level dns for dnsmasq"
   type        = string
-  default     = "ha.local"
+  default     = "talos.local"
 }

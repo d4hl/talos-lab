@@ -1,0 +1,10 @@
+# Config patch for worker nodes (applied via `talosctl gen config --config-patch-worker @worker.diff.yaml`).
+# Only describes the delta from the generated defaults — no secrets here.
+# While this file has no active (non-comment) content, the Makefile simply omits the flag:
+# workers run on pure defaults (DHCP, predictable interface names).
+#
+# Example:
+# machine:
+#   kubelet:
+#     extraArgs:
+#       max-pods: "200"

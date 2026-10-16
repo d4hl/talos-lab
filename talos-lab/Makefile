@@ -1,11 +1,8 @@
 # src:enc
 PAIRS := \
-	./talos-lab/controlplane.yaml:./talos-lab/controlplane.enc.yaml \
-	./talos-lab/worker.yaml:./talos-lab/worker.enc.yaml \
-	./talos-lab/talosconfig:./talos-lab/talosconfig.enc.yaml \
-	./talos-lab/kubeconfig:./talos-lab/kubeconfig.enc.yaml
+	./secrets.yaml:./secrets.enc.yaml
 
-.PHONY: encrypt decrypt edit updatekeys
+.PHONY: encrypt decrypt updatekeys
 
 # *.yaml -> *.enc.yaml
 encrypt:
@@ -22,11 +19,6 @@ decrypt:
 		sops -d "$$dst" > "$$src" \
 			&& echo "decrypted: $$dst -> $$src"; \
 	done
-
-# make edit f=controlplane.enc.yaml
-edit:
-	@test -n "$(f)" || { echo "укажи файл: make edit f=controlplane.enc.yaml"; exit 1; }
-	sops "$(f)"
 
 # sops updatekeys
 updatekeys:
